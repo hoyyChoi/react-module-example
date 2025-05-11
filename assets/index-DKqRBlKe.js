@@ -15855,11 +15855,8 @@ const ModalPage = () => {
                   children: /* @__PURE__ */ jsxRuntimeExports.jsx(y.Title, { children: "Title" })
                 }
               ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(y.Body, { className: "blue", style: { color: "red" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(y.Input, {}) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(y.Footer, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(y.Trigger, { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(y.Button, { children: "취소" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(y.Button, { onClick: () => alert("확인"), children: "확인" })
-              ] }) })
+              /* @__PURE__ */ jsxRuntimeExports.jsx(y.Body, { className: "blue", style: { color: "red" }, children: "body입니다." }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(y.Footer, { children: "footer입니다." })
             ] })
           ]
         }
