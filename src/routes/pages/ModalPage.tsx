@@ -44,16 +44,9 @@ const ModalPage = () => {
                 <Modal.Title>Title</Modal.Title>
               </Modal.Header>
               <Modal.Body className='blue' style={{ color: "red" }}>
-                <Modal.Input />
+                body입니다.
               </Modal.Body>
-              <Modal.Footer>
-                <Modal.Trigger>
-                  <Modal.Button>취소</Modal.Button>
-                  <Modal.Button onClick={() => alert("확인")}>
-                    확인
-                  </Modal.Button>
-                </Modal.Trigger>
-              </Modal.Footer>
+              <Modal.Footer>footer입니다.</Modal.Footer>
             </Modal.Container>
           </Modal>,
           document.body
