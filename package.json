@@ -12,6 +12,7 @@
   },
   "homepage": "https://hoyychoi.github.io/payment-hooks-module-example",
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "hoyychoi-payment-hook": "^0.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
