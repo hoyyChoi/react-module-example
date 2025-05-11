@@ -8,9 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "vite build --base=/payment-module-hook-example/ --minify=false && npx gh-pages -d dist"
+    "deploy": "vite build --base=/react-module-example/ --minify=false && npx gh-pages -d dist"
   },
-  "homepage": "https://hoyychoi.github.io/payment-hooks-module-example",
+  "homepage": "https://hoyychoi.github.io/react-module-example",
   "dependencies": {
     "gh-pages": "^6.3.0",
     "hoyychoi-payment-hook": "^0.0.3",
