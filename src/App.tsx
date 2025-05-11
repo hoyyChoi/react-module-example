@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+  useCardNumber,
+  useCvcNumber,
+  useExpirationDate,
+  usePassword,
+} from "hoyychoi-payment-hook";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const cardNumber = useCardNumber(" - ");
+  const expirationDate = useExpirationDate(" / ");
+  const cvcNumber = useCvcNumber();
+  const password = usePassword();
+
+  const cardInformation = {
+    카드번호: cardNumber,
+    유효기간: expirationDate,
+    cvc: cvcNumber,
+    비밀번호: password,
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main>
+      <h2 className='cardType'>카드 타입: {cardNumber.cardType}</h2>
+      {Object.entries(cardInformation).map(([label, field]) => (
+        <div key={label} className='form-group'>
+          <label className='form-label'>{label}</label>
+          <input
+            className={`form-input ${field.error && "form-input-error"}`}
+            value={field.value}
+            onChange={(e) => field.onChange(e.target.value)}
+          />
+          <p className='form-error-message'>{field.errorMessage}</p>
+        </div>
+      ))}
+    </main>
+  );
 }
 
-export default App
+export default App;
